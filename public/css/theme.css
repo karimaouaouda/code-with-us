@@ -7,11 +7,12 @@
 /*
 * Define CSS variables for theme colors
 */
-:root{
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
-    --success-color: #28a745;
-    --danger-color: #dc3545;
-    --warning-color: #ffc107;
-    --info-color: #17a2b8;
+:root {
+  --dark: #1F2937;
+  --blue: #3882F6;
+  --light: #E5E7EB;
+  --white: #F9FAF8;
+  --blue-hover: #2f6fd6;
+  --text-muted: #6B7280;
+  --shadow: 0 4px 12px rgba(31, 41, 55, 0.08);
 }
