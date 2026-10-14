@@ -6,8 +6,20 @@ body {
   margin: 0;
 }
 
+button {
+  background-color: var(--blue);
+  color: var(--white);
+  font: 700 16px 'Roboto';
+  border-radius: 8px;
+  padding:  12px 32px;
+}
+
 /* Layout */
 .container {
+  max-width:100px;
+  margin-inline: auto;
+  padding-inline: 24px;
+  box-sizing: border-box;
 } 
 
 .section {
@@ -56,6 +68,7 @@ body {
   text-decoration: none;
 }
 .logo::before {
+  content: "{ }";
   color: var(--blue);
   font-weight: 700;
 }
@@ -65,13 +78,32 @@ body {
 
 /* Hero (Tony) */
 .hero {
-
+  background-color: var(--dark);
+  display: flex;
+  gap: 48px;
+  padding: 96px;
 } 
+
 .hero-text {
-
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-.hero-image {
 
+.hero-text h1 {
+  color: var(--white);
+  font: 900 48px 'Roboto';
+}
+
+.hero-text p {
+  color: var(--light);
+  font: 400 18px 'Roboto';
+}
+
+
+.hero-image {
+  flex: 1;
+  min-width: 0;
 }
 
 /* Mobile */
