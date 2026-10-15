@@ -11,7 +11,7 @@ button {
   color: var(--white);
   font: 700 16px 'Roboto';
   border-radius: 8px;
-  padding:  12px 32px;
+  padding:  8px 32px;
 }
 
 /* Layout */
@@ -67,13 +67,18 @@ button {
   color: var(--white);
   text-decoration: none;
 }
-.logo::before {
-  content: "{ }";
-  color: var(--blue);
-  font-weight: 700;
-}
+/* .logo::before { */
+/*   content: "{ }"; */
+/*   color: var(--blue); */
+/*   font-weight: 700; */
+/* } */
 .logo-accent {
   color: var(--blue);
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
 }
 
 /* Hero (Tony) */
@@ -85,9 +90,12 @@ button {
 } 
 
 .hero-text {
+  flex: 1;                    /* locks the text to the left half */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 24px;                  /* even, tight vertical spacing */
+
 }
 
 .hero-text h1 {
@@ -98,17 +106,37 @@ button {
 .hero-text p {
   color: var(--light);
   font: 400 18px 'Roboto';
+  margin: 0;
 }
-
 
 .hero-image {
   flex: 1;
   min-width: 0;
+  width: 100%;
+i object-fit: cover;
 }
 
 /* Mobile */
 @media (max-width: 767px) {
-
+  .site-header {
+    padding: 12px 24px;
+    flex-wrap: wrap;
+  }
+  .hero {
+    padding: 48px 24px;
+    gap: 32px;
+  }
+  .hero-text h1 {
+    font-size: 32px;
+  }
+  .main-nav { 
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 0;
+  }
 }                              
 
 /* Tablet */
