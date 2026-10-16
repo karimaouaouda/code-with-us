@@ -3,7 +3,7 @@
  */
 
 /* ============================================
-   COMPONENTS — Buttons, Nav, Cards, Footer
+   COMPONENTS - Buttons, Nav, Cards, Footer
    ============================================ */
 
 /* ---------- Buttons ---------- */
@@ -40,16 +40,15 @@
   color: var(--white);
   font: 700 16px 'Roboto';
   border-radius: 8px;
-  padding:  8px 32px;
+  padding: 8px 32px;
+  border: none;
+  cursor: pointer;
 }
 
 /* ---------- Header + Nav ---------- */
 .site-header {
   background: var(--dark);
-  padding: 0px var(--sp-7);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: var(--sp-3) 0;
 }
 
 .site-header .container {
@@ -57,6 +56,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  gap: var(--sp-3);
 }
 
 /* Logo */
@@ -69,31 +69,19 @@
   text-decoration: none;
 }
 
-/* .logo::before { */
-/*   content: "{ }"; */
-/*   color: var(--blue); */
-/*   font-weight: 700; */
-/* } */
+.logo img {
+  height: 32px;
+  width: auto;
+}
 
 .logo-accent {
   color: var(--blue);
 }
 
-.logo img {
-  height: 40px;
-  width: auto;
-}
-
-/* Nav */
+/* Nav links */
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 24px;
-}
-
-.nav-list {
-  display: flex;
-  list-style: none;
   gap: var(--sp-5);
 }
 
@@ -124,6 +112,7 @@
   cursor: pointer;
   flex-direction: column;
   gap: 5px;
+  padding: var(--sp-2);
 }
 
 .burger-icon {
@@ -138,17 +127,9 @@
 /* ---------- Hero ---------- */
 .hero {
   background: var(--dark);
-  padding: var(--sp-7) 0;
   display: flex;
-  gap: 48px;
-  padding: var(--sp-7);
-}
-
-.hero .container {
-  display: flex;
-  flex-wrap: wrap;
   gap: var(--sp-6);
-  align-items: center;
+  padding: var(--sp-7);
 }
 
 .hero-text {
@@ -156,7 +137,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: var(--sp-4);
 }
 
 .hero-text h1 {
@@ -164,25 +145,22 @@
   font-weight: 900;
   color: var(--white);
   line-height: 1.1;
-  margin-bottom: var(--sp-3);
+  margin: 0;
 }
 
 .hero-text p {
   font-size: var(--fs-body);
   color: var(--light);
   line-height: 1.6;
-  margin-bottom: var(--sp-4);
+  margin: 0;
 }
 
 .hero-image {
   flex: 1 1 40%;
-}
-
-.hero-image img {
   width: 100%;
   height: auto;
-  display: block;
   border-radius: var(--radius);
+  object-fit: cover;
 }
 
 /* ---------- Random Information ---------- */
@@ -429,7 +407,7 @@
 }
 
 /* ============================================
-   PAGE-SPECIFIC — Sub-pages
+   PAGE-SPECIFIC - Sub-pages
    ============================================ */
 
 /* ---------- Shared section heading (with blue accent) ---------- */
@@ -450,7 +428,7 @@
   margin: var(--sp-3) auto 0;
 }
 
-/* ---------- Courses page — Course tracks ---------- */
+/* ---------- Courses page - Course tracks ---------- */
 .course-tracks {
   display: flex;
   flex-wrap: wrap;
@@ -496,7 +474,7 @@
   line-height: 1.6;
 }
 
-/* ---------- Courses page — How it works ---------- */
+/* ---------- Courses page - How it works ---------- */
 .steps-section {
   background: var(--light);
 }
@@ -541,7 +519,7 @@
   line-height: 1.6;
 }
 
-/* ---------- Courses page — Pricing ---------- */
+/* ---------- Courses page - Pricing ---------- */
 .pricing-options {
   display: flex;
   flex-wrap: wrap;
@@ -592,7 +570,7 @@
 }
 
 /* ============================================
-   MEDIA QUERIES — Components
+   MEDIA QUERIES - Components
    ============================================ */
 
 /* ---------- Tablet ---------- */
@@ -609,16 +587,13 @@
     display: none;
     width: 100%;
     flex-direction: column;
+    align-items: flex-start;
+    gap: var(--sp-3);
+    padding: var(--sp-3) 0;
   }
 
   .nav-toggle:checked ~ .main-nav {
     display: flex;
-  }
-
-  .nav-list {
-    flex-direction: column;
-    gap: var(--sp-3);
-    padding: var(--sp-3) 0;
   }
 
   .burger {
@@ -626,6 +601,11 @@
   }
 
   /* Hero stacks */
+  .hero {
+    flex-direction: column;
+    padding: var(--sp-6) var(--sp-4);
+  }
+
   .hero-text,
   .hero-image {
     flex: 1 1 100%;

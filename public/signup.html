@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Signup - CodeWithUs</title>
+  <title>Apply - CodeWithUs</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/quote-cta-footer.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -11,18 +11,135 @@
 <body>
 
   <header class="site-header">
-    <!-- copy Tony's nav here -->
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="CodeWithUs logo">
+        CodeWithUs
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+      <label for="nav-toggle" class="burger" aria-label="Open menu">
+        <span class="burger-icon"></span>
+        <span class="burger-icon"></span>
+        <span class="burger-icon"></span>
+      </label>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="courses.html" class="nav-link">Courses</a>
+        <a href="signup.html" class="nav-link nav-link--active">Sign Up</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
+
     <section class="page-hero">
       <div class="container">
-        <h1>Signup</h1>
-        <p>Four tracks. One goal: get you hired.</p>
+        <h1>Apply to CodeWithUs</h1>
+        <p>One short form. No coding test. We read every application.</p>
       </div>
     </section>
 
-    <!-- page-specific content -->
+    <section class="section form-section">
+      <div class="container">
+        <h2 class="section-heading">Your application</h2>
+
+        <form class="form-card" method="post">
+          <div class="form-group">
+            <label for="full-name">Full name</label>
+            <input type="text" id="full-name" name="full-name" autocomplete="name" placeholder="Your full name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="track">Which track interests you?</label>
+            <select id="track" name="track" required>
+              <option value="" disabled selected>Choose a track</option>
+              <option value="frontend">Frontend Foundations</option>
+              <option value="javascript">JavaScript Essentials</option>
+              <option value="fullstack">Full-Stack Project</option>
+              <option value="career">Career Launch</option>
+              <option value="not-sure">Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Why do you want to learn to code?</label>
+            <textarea id="message" name="message" rows="5" placeholder="A few sentences are enough."></textarea>
+          </div>
+
+          <button type="submit" class="btn">Send application</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section steps-section">
+      <div class="container">
+        <h2 class="section-heading">What happens next</h2>
+
+        <div class="steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <h3>We review</h3>
+            <p>We read your application and reply within two working days.</p>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <h3>Short call</h3>
+            <p>A 20-minute call to talk about your goals and answer questions.</p>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <h3>Offer</h3>
+            <p>If it's a good fit, we send you an offer and a start date.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section">
+      <div class="container">
+        <h2 class="section-heading">Questions</h2>
+
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>Do I need coding experience?</h3>
+            <p>No. We start from zero. If you can use a browser, you can start the course.</p>
+          </article>
+          <article class="faq-item">
+            <h3>How much time per week?</h3>
+            <p>Full-time: around 40 hours. Part-time: around 15 hours. Same curriculum, different pace.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Is it online?</h3>
+            <p>Yes. All classes are live and online. You only need a laptop and an internet connection.</p>
+          </article>
+          <article class="faq-item">
+            <h3>What if I miss a class?</h3>
+            <p>Every session is recorded and stays available for six months.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section section">
+      <div class="container">
+        <div class="cta-box">
+          <div class="cta-text">
+            <h2>Questions first?</h2>
+            <p>We're happy to talk before you apply.</p>
+          </div>
+          <a href="contact.html" class="btn btn-outline cta-btn">Contact us</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
@@ -39,7 +156,7 @@
       <div class="footer-socials" aria-label="Social links">
         <a href="https://github.com/" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
         <a href="https://www.linkedin.com/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
-        <a href="https://twitter.com/" aria-label="Twitter"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/" aria-label="Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
       </div>
     </div>
   </footer>

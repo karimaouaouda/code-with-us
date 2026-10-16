@@ -12,16 +12,26 @@
 <body>
 
   <header class="site-header">
-    <!-- Tony: logo + nav + burger -->
+    <div class="container">
       <a href="index.html" class="logo">
-      <img src="img/logo.png" alt="">
+        <img src="img/logo.png" alt="CodeWithUs logo">
         CodeWithUs
       </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+      <label for="nav-toggle" class="burger" aria-label="Open menu">
+        <span class="burger-icon"></span>
+        <span class="burger-icon"></span>
+        <span class="burger-icon"></span>
+      </label>
+
       <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="courses.html" class="nav-link">Courses</a>
         <a href="signup.html" class="nav-link">Sign Up</a>
-        <a href="contact" class="nav-link">Contact</a>
-        <a href="courses" class="nav-link">Courses</a>
+        <a href="contact.html" class="nav-link nav-link--active">Contact</a>
       </nav>
+    </div>
   </header>
 
   <main>
@@ -83,7 +93,6 @@
             <textarea id="contact-message" name="message" rows="6" placeholder="Tell us a little about you and what you'd like to know..." required maxlength="3000"></textarea>
           </div>
           <p id="form-note" class="contact-note">Demo form: message delivery isn't connected yet.</p>
-          <!-- shortcut: sending stays disabled until a real form endpoint is provided. -->
           <button class="btn" type="submit" disabled>Send message</button>
         </form>
       </div>
@@ -133,7 +142,7 @@
       <div class="footer-socials" aria-label="Social links">
         <a href="https://github.com/" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
         <a href="https://www.linkedin.com/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
-        <a href="https://twitter.com/" aria-label="Twitter"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/" aria-label="Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
       </div>
     </div>
   </footer>

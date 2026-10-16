@@ -11,14 +11,30 @@
 <body>
 
   <header class="site-header">
-    <!-- Paste Tony's nav here when his PR is merged -->
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="CodeWithUs logo">
+        CodeWithUs
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+      <label for="nav-toggle" class="burger" aria-label="Open menu">
+        <span class="burger-icon"></span>
+        <span class="burger-icon"></span>
+        <span class="burger-icon"></span>
+      </label>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="courses.html" class="nav-link nav-link--active">Courses</a>
+        <a href="signup.html" class="nav-link">Sign Up</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
 
-    <!-- ============================================
-         PAGE HERO
-         ============================================ -->
     <section class="page-hero">
       <div class="container">
         <h1>Our Courses</h1>
@@ -26,16 +42,11 @@
       </div>
     </section>
 
-    <!-- ============================================
-         COURSE TRACKS
-         ============================================ -->
     <section class="section courses-section">
       <div class="container">
-
         <h2 class="section-heading">The four tracks</h2>
 
         <div class="course-tracks">
-
           <article class="course-card">
             <span class="course-badge">4 weeks</span>
             <h3>Frontend Foundations</h3>
@@ -59,21 +70,15 @@
             <h3>Career Launch</h3>
             <p>Portfolio review, CV, LinkedIn, mock interviews, and introductions to hiring partners.</p>
           </article>
-
         </div>
       </div>
     </section>
 
-    <!-- ============================================
-         HOW IT WORKS
-         ============================================ -->
     <section class="section steps-section">
       <div class="container">
-
         <h2 class="section-heading">How it works</h2>
 
         <div class="steps">
-
           <div class="step">
             <span class="step-number">1</span>
             <h3>Apply</h3>
@@ -91,21 +96,15 @@
             <h3>Get hired</h3>
             <p>Career support until you sign your first developer role. Not a deadline - a commitment.</p>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ============================================
-         PRICING / COHORTS
-         ============================================ -->
     <section class="section pricing-section">
       <div class="container">
-
         <h2 class="section-heading">Choose your pace</h2>
 
         <div class="pricing-options">
-
           <article class="pricing-card">
             <h3>Full-time</h3>
             <p class="pricing-duration">12 weeks</p>
@@ -119,14 +118,10 @@
             <p class="pricing-schedule">Evenings and weekends</p>
             <p class="pricing-description">For people learning alongside a job. Same curriculum, more time, smaller daily load.</p>
           </article>
-
         </div>
       </div>
     </section>
 
-    <!-- ============================================
-         CTA BANNER
-         ============================================ -->
     <section class="section cta-section">
       <div class="container">
         <div class="cta-box">
@@ -134,7 +129,7 @@
             <h2>Not sure which track?</h2>
             <p>Talk to us. We'll help you pick based on your goals, not our sales targets.</p>
           </div>
-          <a href="contact.html" class="btn btn-outline">Contact us</a>
+          <a href="contact.html" class="btn btn-outline cta-btn">Contact us</a>
         </div>
       </div>
     </section>
@@ -155,7 +150,7 @@
       <div class="footer-socials" aria-label="Social links">
         <a href="https://github.com/" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
         <a href="https://www.linkedin.com/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
-        <a href="https://twitter.com/" aria-label="Twitter"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/" aria-label="Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
       </div>
     </div>
   </footer>
