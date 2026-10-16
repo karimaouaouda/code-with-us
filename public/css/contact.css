@@ -1,0 +1,138 @@
+/* Contact page additions; reuse the shared theme, layout, forms, and CTA. */
+.contact-layout {
+  gap: var(--sp-6);
+  align-items: flex-start;
+}
+
+.contact-details {
+  flex: 1 1 320px;
+  min-width: 0;
+}
+
+.contact-eyebrow {
+  font-size: var(--fs-caption);
+  font-weight: 700;
+  margin-bottom: var(--sp-3);
+}
+
+.contact-eyebrow::before {
+  content: "";
+  display: block;
+  width: var(--sp-6);
+  height: var(--sp-1);
+  background: var(--blue);
+  margin-bottom: var(--sp-4);
+}
+
+.contact-details h2,
+.contact-about h2 {
+  font-size: var(--fs-section);
+  margin-bottom: var(--sp-4);
+}
+
+.contact-address {
+  font-style: normal;
+  margin-top: var(--sp-5);
+}
+
+.contact-detail {
+  flex-wrap: nowrap;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-4);
+}
+
+.contact-detail i {
+  flex: 0 0 var(--sp-4);
+  padding-top: var(--sp-1);
+  text-align: center;
+}
+
+.contact-detail h3,
+.contact-form h2,
+.contact-about h3 {
+  font-size: var(--fs-card-title);
+  margin-bottom: var(--sp-2);
+}
+
+.contact-detail a {
+  overflow-wrap: anywhere;
+  text-underline-offset: var(--sp-1);
+}
+
+.contact-note,
+.contact-form-intro {
+  font-size: var(--fs-caption);
+  color: var(--text-muted);
+}
+
+.contact-form {
+  flex: 1 1 480px;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+}
+
+.contact-form-intro {
+  margin-bottom: var(--sp-5);
+}
+
+.contact-fields .form-group {
+  flex: 1 1 160px;
+  min-width: 0;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  min-width: 0;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form .btn {
+  margin-top: var(--sp-3);
+}
+
+.contact-form .btn:disabled {
+  background: var(--text-muted);
+  cursor: not-allowed;
+}
+
+.contact-about {
+  background: var(--light);
+}
+
+.contact-about h2 {
+  max-width: 600px;
+  margin-bottom: var(--sp-6);
+}
+
+.contact-about-columns {
+  gap: var(--sp-6);
+}
+
+.contact-about-columns article {
+  flex: 1 1 320px;
+}
+
+@media (max-width: 767px) {
+  .contact-details h2,
+  .contact-about h2 {
+    font-size: 28px;
+  }
+
+  .contact-fields {
+    gap: 0;
+  }
+
+  .contact-fields .form-group {
+    flex-basis: 100%;
+  }
+
+  .contact-form {
+    padding: var(--sp-4);
+  }
+}

@@ -6,23 +6,117 @@
   <title>Contact - CodeWithUs</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/quote-cta-footer.css">
+  <link rel="stylesheet" href="css/contact.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 
   <header class="site-header">
-    <!-- copy Tony's nav here -->
+    <!-- Tony: logo + nav + burger -->
+      <a href="index.html" class="logo">
+      <img src="img/logo.png" alt="">
+        CodeWithUs
+      </a>
+      <nav class="main-nav">
+        <a href="signup.html" class="nav-link">Sign Up</a>
+        <a href="contact" class="nav-link">Contact</a>
+        <a href="courses" class="nav-link">Courses</a>
+      </nav>
   </header>
 
   <main>
     <section class="page-hero">
       <div class="container">
-        <h1>Our Contacts</h1>
-        <p>Four tracks. One goal: get you hired.</p>
+        <h1>Get in touch</h1>
+        <p>A career change is a big step. Let's talk about yours.</p>
       </div>
     </section>
 
-    <!-- page-specific content -->
+    <section class="form-section section" aria-labelledby="contact-heading">
+      <div class="container row contact-layout">
+        <div class="contact-details">
+          <p class="contact-eyebrow">Start a conversation</p>
+          <h2 id="contact-heading">You bring the questions.<br>We'll bring the guidance.</h2>
+          <p>Wondering where to start, which track fits, or how to balance learning with life? Talk to us about your goals. You don't need to know a line of code to say hello.</p>
+          <address class="contact-address">
+            <div class="row contact-detail">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <div><h3>Email us</h3><a href="mailto:hello@codewithus.example">hello@codewithus.example</a></div>
+            </div>
+            <div class="row contact-detail">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              <div><h3>Give us a call</h3><a href="tel:+12025550148">+1 (202) 555-0148</a></div>
+            </div>
+            <div class="row contact-detail">
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              <div><h3>Our office</h3><p>CodeWithUs Studio<br>Online, wherever you are.</p></div>
+            </div>
+          </address>
+          <p class="contact-note">Sample contact details for this bootcamp project.</p>
+        </div>
+
+        <form class="form-card contact-form" method="post" aria-labelledby="form-heading" aria-describedby="form-note">
+          <h2 id="form-heading">Tell us what's on your mind</h2>
+          <p class="contact-form-intro">A question today. A new direction tomorrow.</p>
+          <div class="row contact-fields">
+            <div class="form-group">
+              <label for="contact-name">Name (required)</label>
+              <input id="contact-name" name="name" type="text" autocomplete="name" placeholder="Your full name" required maxlength="100">
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email (required)</label>
+              <input id="contact-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required maxlength="254">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contact-subject">Subject (required)</label>
+            <select id="contact-subject" name="subject" required>
+              <option value="" disabled selected>Choose a subject</option>
+              <option value="courses">Choosing a course</option>
+              <option value="schedule">Schedules and pace</option>
+              <option value="application">My application</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message (required)</label>
+            <textarea id="contact-message" name="message" rows="6" placeholder="Tell us a little about you and what you'd like to know..." required maxlength="3000"></textarea>
+          </div>
+          <p id="form-note" class="contact-note">Demo form: message delivery isn't connected yet.</p>
+          <!-- shortcut: sending stays disabled until a real form endpoint is provided. -->
+          <button class="btn" type="submit" disabled>Send message</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section contact-about" aria-labelledby="about-heading">
+      <div class="container">
+        <p class="contact-eyebrow">People first. Code second.</p>
+        <h2 id="about-heading">A fresh start, with people in your corner.</h2>
+        <div class="row contact-about-columns">
+          <article>
+            <h3>Who we are</h3>
+            <p>We're an online coding bootcamp for people ready to try something new. Over 12 weeks, working developers help you turn curiosity into practical skills, real projects, and a portfolio you can be proud of.</p>
+          </article>
+          <article>
+            <h3>What we believe</h3>
+            <p>You don't need a computer science degree to belong in tech. You need a place to ask questions, room to make mistakes, and someone to help you take the next step. That's why mentorship is at the heart of CodeWithUs.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section section" aria-labelledby="contact-cta-heading">
+      <div class="container">
+        <div class="cta-box">
+          <div class="cta-text">
+            <h2 id="contact-cta-heading">Ready to apply?</h2>
+            <p>Your first line of code could be the start of something bigger.</p>
+          </div>
+          <a href="signup.html" class="btn btn-outline cta-btn">Apply now</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
