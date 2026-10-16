@@ -35,10 +35,21 @@
   color: var(--blue);
 }
 
+.hero button {
+  background-color: var(--blue);
+  color: var(--white);
+  font: 700 16px 'Roboto';
+  border-radius: 8px;
+  padding:  8px 32px;
+}
+
 /* ---------- Header + Nav ---------- */
 .site-header {
   background: var(--dark);
-  padding: var(--sp-3) 0;
+  padding: 0px var(--sp-7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .site-header .container {
@@ -58,19 +69,26 @@
   text-decoration: none;
 }
 
-.logo::before {
-  content: "{ }";
-  color: var(--blue);
-  font-weight: 700;
-}
+/* .logo::before { */
+/*   content: "{ }"; */
+/*   color: var(--blue); */
+/*   font-weight: 700; */
+/* } */
 
 .logo-accent {
   color: var(--blue);
 }
 
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
 /* Nav */
 .main-nav {
   display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
 .nav-list {
@@ -121,6 +139,9 @@
 .hero {
   background: var(--dark);
   padding: var(--sp-7) 0;
+  display: flex;
+  gap: 48px;
+  padding: var(--sp-7);
 }
 
 .hero .container {
@@ -132,6 +153,10 @@
 
 .hero-text {
   flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
 }
 
 .hero-text h1 {
