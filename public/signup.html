@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Signup - CodeWithUs</title>
+  <title>Apply to CodeWithUs - CodeWithUs</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/quote-cta-footer.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -12,17 +12,126 @@
 
   <header class="site-header">
     <!-- copy Tony's nav here -->
+    <a href="index.html" class="logo">
+    <img src="img/logo.png" alt="">
+      CodeWithUs
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+    <label for="nav-toggle" class="burger">
+      <span class="burger-icon"></span>
+      <span class="burger-icon"></span>
+      <span class="burger-icon"></span>
+    </label>
+    <nav class="main-nav"> 
+      <a href="signup.html" class="nav-link">Sign Up</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="courses.html" class="nav-link">Courses</a>
+    </nav>
   </header>
 
   <main>
     <section class="page-hero">
       <div class="container">
-        <h1>Signup</h1>
-        <p>Four tracks. One goal: get you hired.</p>
+        <h1>Apply to CodeWithUs</h1>
+        <p>Tell us where you are and where you want to be. No coding experience needed — we reply within two days.</p>
       </div>
     </section>
 
     <!-- page-specific content -->
+    <section class="form-section section">
+      <div class="container">
+        <h2 class="section-heading">Application</h2>
+        <form class="form-card" action="#" method="post">
+          <div class="form-group">
+            <label for="full-name">Full name</label>
+            <input id="full-name" type="text" name="full-name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="track">Track</label>
+            <select id="track" name="track" required>
+              <option value="" disabled selected>Select a Learning Track</option>
+              <option value="frontend-foundations">Frontend Foundations</option>
+              <option value="javascript-essentials">Javascript Essentials</option>
+              <option value="fullstack-project">Fullstack Project</option>
+              <option value="career-launch">Career Launch</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="start-date">Start Date</label>
+                <input id="start-date" type="date" name="start-date" value="">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+          </div>
+          <button class="btn" type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+    <section class="steps-section section">
+      <div class="container">
+        <h2 class="section-heading">What happens next</h2>
+        <div class="steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <h3>We review</h3>
+            <p>We read every application ourselves and reply within two days — no automated responses.</p>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <h3>Interview</h3>
+            <p>A 30-minute chat with a mentor. It's a conversation, not a test — bring your questions.</p>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <h3>Offer</h3>
+            <p>Pick your track and start date — full-time (12 weeks) or part-time (24 weeks).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section section">
+      <div class="container">
+        <h2 class="section-heading">Frequently asked questions</h2>
+
+        <div class="faq-item">
+          <h3>Do I need any coding experience?</h3>
+          <p>No. Every track starts from zero. You just need to be comfortable with a computer and ready to commit — your mentor adapts to your pace.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How much time do I need each week?</h3>
+          <p>Plan for 8–10 hours a week on the full-time track, or around half that part-time. Live sessions are recorded if you miss one.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How much does it cost?</h3>
+          <p>One price covers the full course, including mentorship and career support. See the pricing section on our Courses page.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Will you help me get a job?</h3>
+          <p>Yes — CV reviews, mock interviews, and introductions to our hiring partners. Our career support continues until you sign your first developer role.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section section">
+      <div class="container">
+        <div class="cta-box">
+          <div class="cta-text">
+            <h2>Questions first?</h2>
+            <p>Talk to us before you apply. Tell us your background and we'll point you to the right track.</p>
+          </div>
+          <a href="contact.html" class="btn btn-outline cta-btn">Contact us</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
