@@ -12,7 +12,7 @@
   background: var(--blue);
   color: var(--white);
   font: 700 var(--fs-caption) 'Roboto', sans-serif;
-  padding: var(--sp-3) var(--sp-5);
+  padding: var(--sp-2) var(--sp-5);
   border-radius: var(--radius);
   border: none;
   cursor: pointer;
@@ -35,18 +35,14 @@
   color: var(--blue);
 }
 
-.hero button {
-  background-color: var(--blue);
-  color: var(--white);
-  font: 700 16px 'Roboto';
-  border-radius: 8px;
-  padding:  8px 32px;
+.btn:focus-visible {
+  outline: 2px solid var(--blue);
 }
 
 /* ---------- Header + Nav ---------- */
 .site-header {
   background: var(--dark);
-  padding: 0px var(--sp-7);
+  padding: var(--sp-3) var(--sp-7);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -88,7 +84,7 @@
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: var(--sp-4);
 }
 
 .nav-list {
@@ -114,9 +110,18 @@
   padding-bottom: 2px;
 }
 
+.nav-link:focus-visible {
+  outline: 2px solid var(--blue);
+}
+
+
 /* Burger (hidden on desktop) */
 .nav-toggle {
   display: none;
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
 }
 
 .burger {
@@ -125,6 +130,11 @@
   flex-direction: column;
   gap: 5px;
 }
+
+.burger:focus-visible {
+  outline: 2px solid var(--blue);
+}
+
 
 .burger-icon {
   display: block;
@@ -145,18 +155,15 @@
 }
 
 .hero .container {
-  display: flex;
-  flex-wrap: wrap;
   gap: var(--sp-6);
   align-items: center;
 }
 
 .hero-text {
-  flex: 1 1 55%;
+  flex: 1 1 45%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
 }
 
 .hero-text h1 {
@@ -175,14 +182,13 @@
 }
 
 .hero-image {
-  flex: 1 1 40%;
-}
-
-.hero-image img {
+  flex: 1 1 55%;
   width: 100%;
   height: auto;
   display: block;
   border-radius: var(--radius);
+  min-width: 0;
+  aspect-ratio: 1408/768;
 }
 
 /* ---------- Random Information ---------- */
@@ -597,6 +603,22 @@
 
 /* ---------- Tablet ---------- */
 @media (min-width: 768px) and (max-width: 1199px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    padding: var(--sp-6);
+    gap: var(--sp-5);
+  }
+  .hero-text {
+    align-items: center;
+    text-align: center;
+  }
+  .hero-image {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 560px;
+    margin-inline: auto;
+  }
   .hero-text h1 { font-size: 40px; }
   .info-card { flex: 1 1 45%; max-width: 45%; }
   .course-card { flex: 1 1 45%; max-width: 45%; }
@@ -604,7 +626,16 @@
 
 /* ---------- Mobile ---------- */
 @media (max-width: 767px) {
-  /* Nav collapses into burger */
+  .site-header {
+    flex-wrap: wrap;
+    padding: var(--sp-3) var(--sp-4)
+  }
+
+  .burger {
+    display: flex;
+    padding: 8px;
+  }
+
   .main-nav {
     display: none;
     width: 100%;
@@ -621,14 +652,20 @@
     padding: var(--sp-3) 0;
   }
 
-  .burger {
-    display: flex;
-  }
-
   /* Hero stacks */
-  .hero-text,
+  .hero {
+    display: flex;
+    flex-direction: column;
+    padding: var(--sp-4);
+    gap: var(--sp-5);
+  }
+  .hero-text {
+    align-items: center;
+    text-align: center;
+  }
   .hero-image {
-    flex: 1 1 100%;
+    flex: 0 0 auto;
+    width: 100%;
   }
 
   .hero-text h1 { font-size: 32px; }
