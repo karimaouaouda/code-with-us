@@ -13,7 +13,7 @@
   <header class="site-header">
     <!-- copy Tony's nav here -->
     <a href="index.html" class="logo">
-    <img src="img/logo.png" alt="">
+      <img src="img/logo.png" alt="CodeWithUs logo">
       CodeWithUs
     </a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
@@ -23,9 +23,10 @@
       <span class="burger-icon"></span>
     </label>
     <nav class="main-nav"> 
-      <a href="signup.html" class="nav-link">Sign Up</a>
-      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="index.html" class="nav-link">Home</a>
       <a href="courses.html" class="nav-link">Courses</a>
+      <a href="signup.html" class="nav-link nav-link--active">Sign Up</a>
+      <a href="contact.html" class="nav-link">Contact</a>
     </nav>
   </header>
 
@@ -41,51 +42,61 @@
     <section class="form-section section">
       <div class="container">
         <h2 class="section-heading">Application</h2>
-        <form class="form-card" action="#" method="post">
+
+        <form class="form-card apply-form" action="#" method="get">
           <div class="form-group">
             <label for="full-name">Full name</label>
             <input id="full-name" type="text" name="full-name" required>
           </div>
+
           <div class="form-group">
             <label for="email">Email</label>
             <input id="email" type="email" name="email" required>
           </div>
+
           <div class="form-group">
             <label for="track">Track</label>
             <select id="track" name="track" required>
               <option value="" disabled selected>Select a Learning Track</option>
               <option value="frontend-foundations">Frontend Foundations</option>
-              <option value="javascript-essentials">Javascript Essentials</option>
-              <option value="fullstack-project">Fullstack Project</option>
+              <option value="javascript-essentials">JavaScript Essentials</option>
+              <option value="fullstack-project">Full-Stack Project</option>
               <option value="career-launch">Career Launch</option>
             </select>
           </div>
+
           <div class="form-group">
             <label for="start-date">Start Date</label>
-                <input id="start-date" type="date" name="start-date" value="">
+            <input id="start-date" type="date" name="start-date" value="" required>
           </div>
+
           <div class="form-group">
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5"></textarea>
           </div>
+
           <button class="btn" type="submit">Submit</button>
         </form>
       </div>
     </section>
+
     <section class="steps-section section">
       <div class="container">
         <h2 class="section-heading">What happens next</h2>
+
         <div class="steps">
           <div class="step">
             <span class="step-number">1</span>
             <h3>We review</h3>
             <p>We read every application ourselves and reply within two days — no automated responses.</p>
           </div>
+
           <div class="step">
             <span class="step-number">2</span>
             <h3>Interview</h3>
             <p>A 30-minute chat with a mentor. It's a conversation, not a test — bring your questions.</p>
           </div>
+
           <div class="step">
             <span class="step-number">3</span>
             <h3>Offer</h3>
