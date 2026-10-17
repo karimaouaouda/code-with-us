@@ -27,7 +27,9 @@ code-with-us/
     └── img/                    # Logo, hero variants, and benefit-card photos
 ```
 
-Serve or publish `public/` as the site root. For example, `/courses.html` maps directly to `public/courses.html`. Links and image paths are relative, so the directory structure must stay intact. No host-specific routing or deployment automation is configured in this repository.
+Serve or publish `public/` as the site root. For example, `/courses.html` maps directly to `public/courses.html`. Links and image paths are relative, so the directory structure must stay intact.
+
+The [GitHub Pages workflow](../.github/workflows/deploy-pages.yml) uploads `public/` directly and deploys it on pushes to `main`, with no build step. It can also be run manually from the Actions tab on `main`; runs from other branches are skipped. Before its first deployment, set **Settings → Pages → Build and deployment → Source** to **GitHub Actions** in the repository. Merge the workflow into `main` to enable automatic deployment. Deployments use the `github-pages` environment and the built-in `GITHUB_TOKEN`; no custom secret is required.
 
 ## Stylesheet responsibilities and loading order
 
@@ -95,7 +97,7 @@ These are existing implementation gaps, not features completed by the documentat
 - The homepage hero has shown horizontal overflow at mobile/tablet widths and needs further responsive work.
 - The homepage hero's “Sign Up” button has no navigation target. The later homepage CTA links to Courses.
 - Contact sending is disabled. Testimonials, contact information, cohort copy, and social destinations are demo content.
-- There is no automated test runner or CI workflow configured. `CONTRIBUTING.md` is currently empty; use `AGENTS.md` for the existing project rules.
+- There is no automated test runner configured. The Pages workflow deploys static assets without running tests. `CONTRIBUTING.md` is currently empty; use `AGENTS.md` for the existing project rules.
 
 ## Validation when changing the site
 
