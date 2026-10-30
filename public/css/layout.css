@@ -1,11 +1,4 @@
-/**
-* Layout CSS file for layout specific styles (grids, containers, etc.) of the website.
-*/
-/* ============================================
-   LAYOUT — Containers, Sections, Structure
-   ============================================ */
 
-/* Reset */
 *,
 *::before,
 *::after {
@@ -14,7 +7,6 @@
   box-sizing: border-box;
 }
 
-/* Container */
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -22,12 +14,10 @@
   padding: 0 var(--sp-4);
 }
 
-/* Section wrapper */
 .section {
   padding: var(--sp-7) 0;
 }
 
-/* Page hero strip (used on sub-pages) */
 .page-hero {
   background: var(--dark);
   padding: var(--sp-7) 0;
@@ -49,7 +39,6 @@
   margin: 0 auto;
 }
 
-/* Flexbox helpers */
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -64,11 +53,6 @@
   align-items: center;
 }
 
-/* ============================================
-   MEDIA QUERIES — Layout
-   ============================================ */
-
-/* Tablet */
 @media (min-width: 768px) and (max-width: 1199px) {
   .section {
     padding: var(--sp-6) 0;
@@ -79,7 +63,6 @@
   }
 }
 
-/* Mobile */
 @media (max-width: 767px) {
   .section {
     padding: var(--sp-6) 0;

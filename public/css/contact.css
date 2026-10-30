@@ -1,4 +1,3 @@
-/* Contact page additions; reuse the shared theme, layout, forms, and CTA. */
 .contact-layout {
   gap: var(--sp-6);
   align-items: flex-start;
