@@ -73,6 +73,10 @@
   .section {
     padding: var(--sp-6) 0;
   }
+
+  .page-hero {
+    padding: var(--sp-6) 0;
+  }
 }
 
 /* Mobile */

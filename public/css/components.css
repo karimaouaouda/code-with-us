@@ -42,7 +42,10 @@
 /* ---------- Header + Nav ---------- */
 .site-header {
   background: var(--dark);
-  padding: var(--sp-3) var(--sp-7);
+  padding: var(--sp-3) 0;
+}
+
+.site-header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -592,12 +595,18 @@
 /* ---------- Tablet ---------- */
 @media (min-width: 768px) and (max-width: 1199px) {
   .site-header {
-    padding: var(--sp-3) var(--sp-6)
+    padding: var(--sp-3) 0;
+  }
+  .site-header .container {
+    padding: 0 var(--sp-6);
+  }
+  .hero {
+    padding: var(--sp-4) 0 var(--sp-6);
   }
   .hero-inner {
     flex-direction: column;
-    padding: var(--sp-6);
-    gap: var(--sp-5);
+    padding: 0 var(--sp-6);
+    gap: var(--sp-4);
   }
   .hero-text {
     align-items: center;
@@ -617,8 +626,15 @@
 /* ---------- Mobile ---------- */
 @media (max-width: 767px) {
   .site-header {
+    padding: var(--sp-3) 0;
+  }
+
+  .site-header .container {
     flex-wrap: wrap;
-    padding: var(--sp-3) var(--sp-4)
+  }
+
+  .hero {
+    padding: var(--sp-4) 0 var(--sp-6);
   }
 
   .burger {
@@ -646,8 +662,8 @@
   .hero-inner {
     display: flex;
     flex-direction: column;
-    padding: var(--sp-4);
-    gap: var(--sp-5);
+    padding: 0 var(--sp-4);
+    gap: var(--sp-4);
   }
   .hero-text {
     align-items: center;
