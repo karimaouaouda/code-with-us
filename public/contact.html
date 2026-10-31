@@ -12,7 +12,7 @@
 <body>
 
   <header class="site-header">
-    <!-- Tony: logo + nav + burger -->
+    <div class="container">
       <a href="index.html" class="logo">
         <img src="img/logo.png" alt="CodeWithUs logo">
         CodeWithUs
@@ -29,6 +29,7 @@
         <a href="signup.html" class="nav-link">Sign Up</a>
         <a href="contact.html" class="nav-link nav-link--active">Contact</a>
       </nav>
+    </div>
   </header>
 
   <main>
@@ -90,7 +91,6 @@
             <textarea id="contact-message" name="message" rows="6" placeholder="Tell us a little about you and what you'd like to know..." required maxlength="3000"></textarea>
           </div>
           <p id="form-note" class="contact-note">Demo form: message delivery isn't connected yet.</p>
-          <!-- shortcut: sending stays disabled until a real form endpoint is provided. -->
           <button class="btn" type="submit" disabled>Send message</button>
         </form>
       </div>
@@ -101,14 +101,14 @@
         <p class="contact-eyebrow">People first. Code second.</p>
         <h2 id="about-heading">A fresh start, with people in your corner.</h2>
         <div class="row contact-about-columns">
-          <article>
+          <section>
             <h3>Who we are</h3>
             <p>We're an online coding bootcamp for people ready to try something new. Over 12 weeks, working developers help you turn curiosity into practical skills, real projects, and a portfolio you can be proud of.</p>
-          </article>
-          <article>
+          </section>
+          <section>
             <h3>What we believe</h3>
             <p>You don't need a computer science degree to belong in tech. You need a place to ask questions, room to make mistakes, and someone to help you take the next step. That's why mentorship is at the heart of CodeWithUs.</p>
-          </article>
+          </section>
         </div>
       </div>
     </section>
