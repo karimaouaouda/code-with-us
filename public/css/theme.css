@@ -1,16 +1,23 @@
+/* ============================================
+   THEME — Variables + Font Import
+   ============================================ */
 
+/* Roboto import */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
 
 :root {
+  /* Client-mandated palette */
   --dark: #1F2937;
   --blue: #3882F6;
   --light: #E5E7EB;
   --white: #F9FAF8;
 
+  /* Derived (still within the palette) */
   --blue-hover: #2f6fd6;
   --text-muted: #6B7280;
   --shadow: 0 4px 12px rgba(31, 41, 55, 0.08);
 
+  /* Typography scale */
   --fs-hero: 48px;
   --fs-section: 36px;
   --fs-card-title: 20px;
@@ -19,6 +26,7 @@
   --fs-logo: 24px;
   --fs-quote: 36px;
 
+  /* Spacing scale */
   --sp-1: 4px;
   --sp-2: 8px;
   --sp-3: 16px;
@@ -27,6 +35,7 @@
   --sp-6: 48px;
   --sp-7: 96px;
 
+  /* Layout */
   --container-max: 1100px;
   --radius: 8px;
   --radius-sm: 4px;
